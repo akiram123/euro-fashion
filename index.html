@@ -2,484 +2,413 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050806">
-<title>EURO FASHION | Style Without Limits</title>
-<meta name="description" content="Discover men's and women's fashion at EURO FASHION, Entebbe Uganda.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"><style>
-:root{
- --black:#050806;
- --dark:#0b120d;
- --green:#006b3c;
- --emerald:#008f52;
- --gold:#d8b45b;
- --gold-light:#f0d58b;
- --white:#ffffff;
- --light:#f7f7f3;
- --text:#202820;
- --muted:#707970;
+<meta name="theme-color" content="#06140d">
+<title>EURO FASHION | Style Without Limits</title><style>
+:root {
+  --black:#050806;
+  --dark:#0b120e;
+  --green:#008044;
+  --emerald:#00a65a;
+  --gold:#d6b45b;
+  --white:#ffffff;
+  --muted:#c5c9c6;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--text)}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,sans-serif;
+}
 a{text-decoration:none;color:inherit}
-button,input{font:inherit}
+button{cursor:pointer;font-family:inherit}
 
-/* TOP BAR */
-.topbar{
- background:var(--green);color:white;text-align:center;
- padding:9px 12px;font-size:11px;font-weight:700;
- letter-spacing:2px
-}
-
-/* NAVIGATION */
 header{
- background:var(--black);color:white;position:sticky;
- top:0;z-index:1000;border-bottom:2px solid var(--gold)
+  background:#030604;
+  border-bottom:2px solid var(--gold);
+  padding:14px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
 }
-.nav{
- max-width:1250px;margin:auto;padding:13px 22px;
- display:flex;align-items:center;justify-content:space-between;gap:18px
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:55px;height:55px;object-fit:contain}
-.brand-name{
- font:800 23px 'Playfair Display',serif;
- letter-spacing:1px;color:white
+.logo img{
+  width:58px;height:58px;
+  object-fit:contain;
 }
-.brand-name span{color:var(--gold)}
-.brand small{
- display:block;color:#16a66a;font:800 9px 'DM Sans',sans-serif;
- letter-spacing:3px;margin-top:4px
+.logo h2{
+  color:var(--gold);
+  font-size:23px;
+  letter-spacing:2px;
 }
-.navlinks{display:flex;align-items:center;gap:23px;font-size:13px}
-.navlinks a{transition:.2s}
-.navlinks a:hover{color:var(--gold)}
-.nav-cta{
- background:var(--gold);color:#080b08;padding:12px 17px;
- border-radius:3px;font-weight:800
+.logo span{
+  display:block;
+  color:var(--emerald);
+  font-size:10px;
+  letter-spacing:3px;
+  margin-top:4px;
 }
-.menu-btn{display:none;background:none;border:0;color:white;font-size:27px}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{font-weight:bold;font-size:13px}
+nav a:hover{color:var(--gold)}
 
-/* HERO */
 .hero{
- min-height:510px;display:flex;align-items:center;color:white;
- background:
- linear-gradient(90deg,rgba(2,7,4,.97),rgba(2,7,4,.78),rgba(2,7,4,.25)),
- url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center/cover
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  padding:65px 8%;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,55,30,.65)),
+  url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600') center/cover;
 }
-.hero-content{max-width:1250px;width:100%;margin:auto;padding:75px 25px}
-.eyebrow{
- color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:800
-}
+.hero-content{max-width:650px}
 .hero h1{
- font:800 clamp(43px,7vw,78px)/1.05 'Playfair Display',serif;
- max-width:720px;margin:20px 0
+  font-size:clamp(40px,7vw,75px);
+  color:var(--gold);
+  line-height:1.05;
 }
-.hero h1 span{color:var(--gold)}
-.hero p{color:#e1e8e2;max-width:510px;line-height:1.9;font-size:15px}
-.hero-buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:29px}
+.hero h1 span{color:var(--emerald)}
+.hero p{
+  margin:22px 0;
+  color:white;
+  font-size:17px;
+  line-height:1.7;
+}
 .btn{
- display:inline-block;padding:14px 22px;border-radius:3px;
- font-size:11px;font-weight:800;letter-spacing:1px;transition:.2s
+  display:inline-block;
+  padding:14px 25px;
+  background:var(--green);
+  color:white;
+  border:1px solid var(--gold);
+  border-radius:5px;
+  font-weight:bold;
 }
-.btn-gold{background:var(--gold);color:#080b08}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
-.btn-outline{border:1px solid white;color:white}
-.btn-outline:hover{background:var(--green);border-color:var(--green)}
+.btn:hover{background:var(--gold);color:#000}
 
-/* FEATURES */
-.features{
- background:white;display:grid;grid-template-columns:repeat(3,1fr);
- max-width:1150px;margin:-25px auto 0;position:relative;
- border-top:3px solid var(--gold);
- box-shadow:0 10px 35px #0000000c
-}
-.feature{text-align:center;padding:24px 12px;border-right:1px solid #e9eee9}
-.feature:last-child{border:0}
-.feature strong{display:block;font-size:13px;margin-bottom:6px;color:var(--green)}
-.feature span{font-size:11px;color:#777}
-
-/* COLLECTION */
-.section{max-width:1250px;margin:auto;padding:65px 22px}
-.section-heading{text-align:center;margin-bottom:30px}
-.section-heading small{
- color:var(--green);font-weight:800;letter-spacing:3px;font-size:10px
-}
+.section{padding:65px 6%}
+.section-heading{text-align:center;margin-bottom:35px}
 .section-heading h2{
- font:700 36px 'Playfair Display',serif;margin:11px 0;color:var(--black)
+  color:var(--gold);
+  font-size:32px;
+  margin-bottom:12px;
 }
-.section-heading p{color:var(--muted);font-size:13px}
-.toolbar{display:flex;gap:12px;margin-bottom:20px}
-.search{
- width:100%;border:1px solid #dce4dc;border-radius:3px;
- padding:14px 16px;background:white;outline:none
+.section-heading p{color:var(--muted)}
+
+.features{
+  background:#0a2115;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  padding:30px 6%;
+  text-align:center;
 }
-.search:focus{border:1px solid var(--green);box-shadow:0 0 0 2px #008f5215}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
+.feature h3{color:var(--gold);margin-bottom:8px}
+.feature p{color:#ddd;font-size:13px}
+
+.filters{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:25px;
+}
 .filter{
- border:1px solid #d8e0d8;background:white;color:#344238;
- padding:10px 15px;border-radius:2px;font-size:11px;
- font-weight:700;cursor:pointer;transition:.2s
+  background:#101a13;
+  color:white;
+  border:1px solid var(--emerald);
+  padding:10px 16px;
+  border-radius:25px;
 }
 .filter.active,.filter:hover{
- background:var(--green);border-color:var(--green);color:white
+  background:var(--gold);
+  color:#000;
+  border-color:var(--gold);
 }
-.product-count{font-size:12px;color:#69766c;margin-bottom:15px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
+.search{
+  display:block;
+  width:min(500px,100%);
+  padding:14px;
+  margin:0 auto 35px;
+  background:#101a13;
+  color:white;
+  border:1px solid var(--gold);
+  border-radius:5px;
+  outline:none;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:22px;
+}
 .card{
- background:white;border-radius:3px;overflow:hidden;
- border:1px solid #e9ece8;transition:.25s
+  background:#101711;
+  border:1px solid #23613e;
+  border-radius:9px;
+  overflow:hidden;
+  transition:.25s;
 }
 .card:hover{
- transform:translateY(-5px);
- box-shadow:0 12px 28px #10251a18;
- border-color:var(--gold)
+  transform:translateY(-5px);
+  border-color:var(--gold);
+  box-shadow:0 8px 25px #000;
 }
-.photo{
- height:270px;background:#e7ebe6;position:relative;overflow:hidden
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  background:#18231c;
 }
-.photo img{
- width:100%;height:100%;object-fit:cover;display:block;
- transition:transform .4s
-}
-.card:hover .photo img{transform:scale(1.05)}
-.tag{
- position:absolute;top:12px;left:12px;background:var(--green);
- color:white;padding:7px 10px;font-size:9px;
- font-weight:800;letter-spacing:1px;z-index:2
-}
-.card-info{padding:15px}
-.card-info small{
- color:var(--green);font-size:9px;font-weight:800;
- letter-spacing:1px;text-transform:uppercase
-}
-.card-info h3{font-size:14px;margin:8px 0 13px;color:#17231b}
-.enquire{
- display:block;text-align:center;background:var(--black);
- color:white;padding:12px;border-radius:2px;
- font-size:10px;font-weight:800;letter-spacing:.5px
-}
-.enquire:hover{background:var(--green)}
-.no-results{
- text-align:center;padding:45px;color:#777;grid-column:1/-1
-}
+.card-info{padding:16px}
+.card h3{color:var(--gold);font-size:17px;margin-bottom:8px}
+.card p{color:#ccc;font-size:13px;margin-bottom:13px}
+.card .btn{padding:10px 15px;font-size:13px}
 
-/* PROMOTION */
 .banner{
- background:linear-gradient(110deg,#030704,#005a32);
- color:white;padding:55px 22px;text-align:center;
- border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)
+  background:linear-gradient(110deg,#003c22,#071009);
+  border-top:2px solid var(--gold);
+  border-bottom:2px solid var(--gold);
+  padding:55px 7%;
+  text-align:center;
 }
-.banner h2{font:700 34px 'Playfair Display',serif;margin-bottom:12px}
-.banner p{color:#d4e0d8;font-size:13px;margin-bottom:22px}
+.banner h2{color:var(--gold);font-size:32px;margin-bottom:15px}
+.banner p{margin-bottom:20px;line-height:1.7}
 
-/* ABOUT */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-image{height:360px;border-radius:3px;overflow:hidden;border:4px solid white;box-shadow:0 5px 25px #0002}
-.about-image img{width:100%;height:100%;object-fit:cover}
-.about-text h2{font:700 36px 'Playfair Display',serif;margin:13px 0;color:var(--black)}
-.about-text p{color:#69756d;line-height:1.9;font-size:13px;margin-bottom:16px}
+.about{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  align-items:center;
+}
+.about img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border:2px solid var(--gold);
+  border-radius:8px;
+}
+.about h2{color:var(--gold);font-size:32px;margin-bottom:18px}
+.about p{color:#ddd;line-height:1.9;margin-bottom:15px}
 
-/* CONTACT */
 .contact{
- background:var(--black);color:white;padding:68px 22px;text-align:center;
- border-top:3px solid var(--gold)
+  background:#0b1c12;
+  border-top:2px solid var(--gold);
+  text-align:center;
 }
-.contact h2{font:700 36px 'Playfair Display',serif;margin:13px 0}
-.contact p{color:#bdc8c0;font-size:13px;line-height:1.9}
-.contact-cards{
- display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px auto
-}
-.contact-card{
- background:#101b13;border:1px solid #17663f;
- border-bottom:3px solid var(--gold);
- padding:19px 24px;min-width:220px
-}
-.contact-card small{display:block;color:var(--gold);font-size:10px;margin-bottom:9px;letter-spacing:1px}
-.contact-card strong{font-size:15px}
-.contact-card a:hover{color:var(--gold)}
+.contact h2{color:var(--gold);font-size:32px;margin-bottom:20px}
+.contact p{margin:12px;color:#eee}
+.contact a{color:var(--emerald);font-weight:bold}
+
 footer{
- background:#020402;color:#a9b4ac;padding:23px;
- text-align:center;font-size:11px;border-top:1px solid #145a36
+  padding:25px;
+  background:#020403;
+  border-top:2px solid var(--gold);
+  text-align:center;
+  color:#bbb;
+  font-size:13px;
 }
 footer strong{color:var(--gold)}
-.float-wa{
- position:fixed;bottom:20px;right:18px;z-index:999;
- background:#087747;color:white;padding:15px 19px;
- border:1px solid var(--gold);border-radius:3px;
- font-weight:800;font-size:12px;box-shadow:0 5px 20px #0004
-}
-.float-wa:hover{background:#009b59}
 
-/* MOBILE */
-@media(max-width:900px){
- .grid{grid-template-columns:repeat(3,1fr)}
- .navlinks{gap:13px}
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  background:#008044;
+  color:white;
+  padding:15px 18px;
+  border:1px solid var(--gold);
+  border-radius:40px;
+  font-weight:bold;
+  z-index:10;
 }
-@media(max-width:650px){
- .nav{padding:11px 15px}
- .brand-name{font-size:19px}
- .brand img{width:45px;height:45px}
- .menu-btn{display:block}
- .navlinks{
-  display:none;position:absolute;top:70px;left:0;right:0;
-  background:var(--black);padding:22px;
-  flex-direction:column;align-items:stretch;
-  border-bottom:2px solid var(--gold)
- }
- .navlinks.show{display:flex}
- .nav-cta{text-align:center}
- .hero{min-height:470px}
- .hero-content{padding:65px 20px}
- .features{margin:0}
- .feature{padding:18px 5px}
- .feature strong{font-size:10px}
- .feature span{font-size:9px}
- .section{padding:48px 14px}
- .section-heading h2{font-size:30px}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
- .photo{height:210px}
- .card-info{padding:11px}
- .card-info h3{font-size:12px}
- .enquire{font-size:9px;padding:11px 5px}
- .about{grid-template-columns:1fr;gap:23px}
- .about-image{height:270px}
- .contact h2{font-size:30px}
+
+@media(max-width:600px){
+  header{justify-content:center}
+  nav{justify-content:center}
+  .hero{min-height:420px;padding:50px 6%}
+  .card img{height:230px}
 }
-@media(max-width:360px){
- .photo{height:175px}
- .brand-name{font-size:16px}
-}
-</style></head><body>
-<div class="topbar">EURO FASHION &nbsp; • &nbsp; STYLE WITHOUT LIMITS &nbsp; • &nbsp; ENTEBBE, UGANDA</div><header>
-<nav class="nav">
-<a href="#" class="brand">
-<img src="euro-fashion-logo.png" alt="EURO FASHION Logo" onerror="this.style.display='none'">
-<div class="brand-name">EURO <span>FASHION</span><small>STYLE WITHOUT LIMITS</small></div>
-</a>
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-<div class="navlinks" id="navlinks">
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#collection" onclick="closeMenu()">Collection</a>
-<a href="#about" onclick="closeMenu()">About Us</a>
-<a href="#contact" onclick="closeMenu()">Contact</a>
-<a class="nav-cta" href="https://wa.me/256700787697">CHAT WITH US</a>
-</div>
-</nav>
-</header><main>
-<section class="hero" id="home">
-<div class="hero-content">
-<div class="eyebrow">THE FASHION DESTINATION</div>
-<h1>YOUR STYLE.<br><span>YOUR STATEMENT.</span></h1>
-<p>Discover fashion that speaks for you. Explore stylish clothing, footwear and everyday essentials for men and women at EURO FASHION.</p>
-<div class="hero-buttons">
-<a href="#collection" class="btn btn-gold">EXPLORE COLLECTION</a>
-<a href="https://wa.me/256700787697" class="btn btn-outline">CONTACT US</a>
-</div>
-</div>
-</section><div class="features">
-<div class="feature"><strong>MEN & WOMEN</strong><span>Fashion for everyone</span></div>
-<div class="feature"><strong>FASHION VARIETY</strong><span>Styles for every occasion</span></div>
-<div class="feature"><strong>WHATSAPP ENQUIRIES</strong><span>Talk directly with us</span></div>
-</div><section class="section" id="collection">
-<div class="section-heading">
-<small>DISCOVER YOUR LOOK</small>
-<h2>Explore Our Collection</h2>
-<p>Find your next favourite style.</p>
-</div><div class="toolbar">
-<input class="search" id="search" type="search" placeholder="Search for shirts, shoes, jeans..." oninput="renderProducts()">
-</div><div class="filters" id="filters">
-<button class="filter active" data-category="All">All Collection</button>
-<button class="filter" data-category="Men">Men</button>
-<button class="filter" data-category="Women">Women</button>
-<button class="filter" data-category="Tops">Tops & Shirts</button>
-<button class="filter" data-category="Bottoms">Trousers & Bottoms</button>
-<button class="filter" data-category="Outerwear">Jackets & Jumpers</button>
-<button class="filter" data-category="Dresses">Dresses & Skirts</button>
-<button class="filter" data-category="Shoes">Shoes</button>
-<button class="filter" data-category="Sportswear">Sportswear</button>
-<button class="filter" data-category="Bags">Bags</button>
-<button class="filter" data-category="Wearables">Other Wearables</button>
-</div><div class="product-count" id="productCount"></div>
-<div class="grid" id="productGrid"></div>
+</style></head><body><header>
+  <a class="logo" href="#">
+    <img src="euro-fashion-logo.png" alt="EURO FASHION Logo">
+    <div>
+      <h2>EURO FASHION</h2>
+      <span>STYLE WITHOUT LIMITS</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#collection">COLLECTION</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header><section class="hero" id="home">
+  <div class="hero-content">
+    <h1>STYLE <span>WITHOUT</span> LIMITS</h1>
+    <p>Discover fashion that defines your confidence. Explore our collection of stylish clothing, footwear and fashion essentials.</p>
+    <a href="#collection" class="btn">EXPLORE COLLECTION</a>
+  </div>
+</section><section class="features">
+  <div class="feature"><h3>PREMIUM STYLE</h3><p>Fashion for every occasion.</p></div>
+  <div class="feature"><h3>MEN & WOMEN</h3><p>Collections for everyone.</p></div>
+  <div class="feature"><h3>FASHION VARIETY</h3><p>Different styles and designs.</p></div>
+  <div class="feature"><h3>CONTACT US</h3><p>Enquire directly through WhatsApp.</p></div>
+</section><section class="section" id="collection">
+  <div class="section-heading">
+    <h2>OUR COLLECTION</h2>
+    <p>Find your style. Wear your confidence.</p>
+  </div>  <input class="search" id="search" placeholder="Search for clothes, shoes and more...">  <div class="filters" id="filters">
+    <button class="filter active" data-category="All">All</button>
+    <button class="filter" data-category="Men">Men</button>
+    <button class="filter" data-category="Women">Women</button>
+    <button class="filter" data-category="Trousers">Trousers</button>
+    <button class="filter" data-category="Tops">Tops</button>
+    <button class="filter" data-category="Jackets">Jackets</button>
+    <button class="filter" data-category="Dresses">Dresses</button>
+    <button class="filter" data-category="Shoes">Shoes</button>
+    <button class="filter" data-category="Sportswear">Sportswear</button>
+    <button class="filter" data-category="Bags">Bags</button>
+  </div>  <div class="products" id="products"></div>
 </section><section class="banner">
-<h2>Fashion That Defines You</h2>
-<p>Find the look. Own the moment. Make your statement.</p>
-<a href="https://wa.me/256700787697" class="btn btn-gold">ENQUIRE ON WHATSAPP</a>
-</section><section class="section about" id="about">
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85" alt="Fashion collection">
-</div>
-<div class="about-text">
-<div class="eyebrow">WELCOME TO EURO FASHION</div>
-<h2>Style Without Limits.</h2>
-<p>EURO FASHION brings together a wide selection of fashion for men and women. From everyday outfits to standout looks, discover styles that help you express yourself.</p>
-<p>Browse our collection and contact us directly on WhatsApp for product enquiries and orders.</p>
-<a href="#collection" class="btn btn-gold">VIEW COLLECTION</a>
-</div>
-</section><section class="contact" id="contact">
-<div class="eyebrow">LET'S CONNECT</div>
-<h2>Find Your Style With Us</h2>
-<p>Have a question about an item? Contact EURO FASHION directly.<br>We are located in Entebbe, Uganda.</p>
-<div class="contact-cards">
-<div class="contact-card">
-<small>WHATSAPP / CALL 1</small>
-<strong><a href="https://wa.me/256700787697">+256 700 787 697</a></strong>
-</div>
-<div class="contact-card">
-<small>WHATSAPP / CALL 2</small>
-<strong><a href="https://wa.me/25665549608">+256 655 496 08</a></strong>
-</div>
-<div class="contact-card">
-<small>OUR LOCATION</small>
-<strong>Entebbe, Uganda</strong>
-</div>
-</div>
-<a href="https://wa.me/256700787697?text=Hello%20EURO%20FASHION%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn btn-gold">MESSAGE EURO FASHION</a>
-</section>
-</main><footer>© <span id="year"></span> <strong>EURO FASHION</strong> · STYLE WITHOUT LIMITS · ENTEBBE, UGANDA</footer>
-<a class="float-wa" href="https://wa.me/256700787697">WhatsApp Us ↗</a><script>
-/*
-  Product images are individually assigned fixed Unsplash image URLs.
-  They are not random keyword searches.
-  Image subjects are representative catalogue photography, not guaranteed
-  to be the exact stock item available in the shop.
-*/
+  <h2>YOUR STYLE. YOUR STATEMENT.</h2>
+  <p>Upgrade your wardrobe with EURO FASHION.<br>Contact us today to enquire about available designs.</p>
+  <a class="btn" href="https://wa.me/256700787697" target="_blank">CHAT WITH US</a>
+</section><section class="section" id="about">
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900" alt="Fashion collection">
+    <div>
+      <h2>ABOUT EURO FASHION</h2>
+      <p>EURO FASHION brings together style, confidence and individuality. We showcase a variety of fashion choices for men and women.</p>
+      <p>From everyday outfits to smart looks, footwear and sportswear, explore a collection designed to help you express yourself.</p>
+      <a href="#contact" class="btn">CONTACT EURO FASHION</a>
+    </div>
+  </div>
+</section><section class="section contact" id="contact">
+  <h2>CONTACT US</h2>
+  <p>Location: <strong>Entebbe, Uganda</strong></p>
+  <p>WhatsApp: <a href="https://wa.me/256700787697">+256 700 787 697</a></p>
+  <p>WhatsApp: <a href="https://wa.me/25665549608">+256 655 496 08</a></p>
+  <br>
+  <a class="btn" href="https://wa.me/256700787697">SEND AN ENQUIRY</a>
+</section><footer>
+  <strong>EURO FASHION</strong> — STYLE WITHOUT LIMITS<br><br>
+  © <span id="year"></span> EURO FASHION. All rights reserved.
+</footer><a class="whatsapp" href="https://wa.me/256700787697" target="_blank">WhatsApp</a>
+
+<script>
 const products = [
-{name:"Men's Polo Shirts",cat:"Tops",gender:"Men",img:"photo-1625910513413-5fc45e6d5f30"},
-{name:"Men's T-Shirts",cat:"Tops",gender:"Men",img:"photo-1521572163474-6864f9cf17ab"},
-{name:"Men's Formal Shirts",cat:"Tops",gender:"Men",img:"photo-1603252109303-2751441dd157"},
-{name:"Men's Casual Shirts",cat:"Tops",gender:"Men",img:"photo-1598033129183-c4f50c736f10"},
-{name:"Women's Blouses",cat:"Tops",gender:"Women",img:"photo-1564257577-5f8d6e5f7e5c"},
-{name:"Women's T-Shirts",cat:"Tops",gender:"Women",img:"photo-1503342217505-b0a15ec3261c"},
-{name:"Crop Tops",cat:"Tops",gender:"Women",img:"photo-1551163943-3f6a855d1153"},
-{name:"Tank Tops",cat:"Tops",gender:"Women",img:"photo-1503341455253-b2e723bb3dbb"},
-{name:"Long Sleeve Tops",cat:"Tops",gender:"Women",img:"photo-1483985988355-763728e1935b"},
+  // MEN
+  ["Men's T-Shirt","Men","https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700"],
+  ["Men's Polo Shirt","Men","https://images.unsplash.com/photo-1625910513413-5fc3b7f3b1c4?w=700"],
+  ["Men's Formal Shirt","Men","https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=700"],
+  ["Men's Casual Shirt","Men","https://images.unsplash.com/photo-1603252109303-2751441dd157?w=700"],
+  ["Men's Hoodie","Men","https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=700"],
+  ["Men's Jumper","Men","https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=700"],
+  ["Men's Jeans","Trousers","https://images.unsplash.com/photo-1542272604-787c3835535d?w=700"],
+  ["Men's Cargo Trousers","Trousers","https://images.unsplash.com/photo-1517438476312-10d79c077509?w=700"],
+  ["Men's Chinos","Trousers","https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=700"],
+  ["Men's Joggers","Trousers","https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=700"],
+  ["Men's Shorts","Trousers","https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=700"],
+  ["Men's Leather Jacket","Jackets","https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700"],
+  ["Men's Denim Jacket","Jackets","https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700"],
+  ["Men's Tracksuit","Sportswear","https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=700"],
+  ["Men's Sneakers","Shoes","https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"],
+  ["Men's Formal Shoes","Shoes","https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=700"],
+  ["Men's Loafers","Shoes","https://images.unsplash.com/photo-1531310197839-ccf54634509e?w=700"],
+  ["Men's Boots","Shoes","https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"],
 
-{name:"Men's Jeans",cat:"Bottoms",gender:"Men",img:"photo-1542272604-787c3835535d"},
-{name:"Women's Jeans",cat:"Bottoms",gender:"Women",img:"photo-1541099649105-f69ad21f3246"},
-{name:"Women's Leggings",cat:"Bottoms",gender:"Women",img:"photo-1506629905607-d9a9c8e7c4f0"},
-{name:"Cargo Trousers",cat:"Bottoms",gender:"Men",img:"photo-1515886657613-9f3515b0c78f"},
-{name:"Men's Chinos",cat:"Bottoms",gender:"Men",img:"photo-1473966968600-fa801b869a1a"},
-{name:"Joggers",cat:"Bottoms",gender:"Men",img:"photo-1551488831-00ddcb6c6bd3"},
-{name:"Women's Shorts",cat:"Bottoms",gender:"Women",img:"photo-1591195853828-11db59a44f6b"},
-{name:"Men's Shorts",cat:"Bottoms",gender:"Men",img:"photo-1598033129183-c4f50c736f10"},
+  // WOMEN
+  ["Women's Blouse","Women","https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=700"],
+  ["Women's T-Shirt","Women","https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=700"],
+  ["Women's Crop Top","Tops","https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=700"],
+  ["Women's Tank Top","Tops","https://images.unsplash.com/photo-1566206091558-7f218b696731?w=700"],
+  ["Women's Long Sleeve Top","Tops","https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=700"],
+  ["Women's Jeans","Trousers","https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=700"],
+  ["Women's Leggings","Trousers","https://images.unsplash.com/photo-1506629905607-d9c297d1a6d3?w=700"],
+  ["Women's Cargo Trousers","Trousers","https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700"],
+  ["Women's Joggers","Trousers","https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=700"],
+  ["Women's Jumper","Women","https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=700"],
+  ["Women's Sweater","Women","https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=700"],
+  ["Women's Jacket","Jackets","https://images.unsplash.com/photo-1548624149-fd9f3c4e7b9b?w=700"],
+  ["Women's Denim Jacket","Jackets","https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=700"],
+  ["Women's Dress","Dresses","https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700"],
+  ["Maxi Dress","Dresses","https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=700"],
+  ["Evening Gown","Dresses","https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=700"],
+  ["Women's Skirt","Women","https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=700"],
+  ["Women's Sneakers","Shoes","https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700"],
+  ["Women's High Heels","Shoes","https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700"],
+  ["Women's Sandals","Shoes","https://images.unsplash.com/photo-1603487742131-4160ec999306?w=700"],
+  ["Women's Boots","Shoes","https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=700"],
+  ["Women's Handbag","Bags","https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=700"],
+  ["Women's Shoulder Bag","Bags","https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=700"],
 
-{name:"Knit Sweaters",cat:"Outerwear",gender:"Women",img:"photo-1576566588028-4147f3842f27"},
-{name:"Women's Jumpers",cat:"Outerwear",gender:"Women",img:"photo-1618354691373-d851c5c3a990"},
-{name:"Men's Jumpers",cat:"Outerwear",gender:"Men",img:"photo-1618354691229-88d47f285158"},
-{name:"Hoodies",cat:"Outerwear",gender:"Men",img:"photo-1556821840-3a63f95609a7"},
-{name:"Leather Jackets",cat:"Outerwear",gender:"Men",img:"photo-1520975958225-5b3e7e4f3a6f"},
-{name:"Denim Jackets",cat:"Outerwear",gender:"Women",img:"photo-1543076447-215ad9ba6923"},
-{name:"Women's Jackets",cat:"Outerwear",gender:"Women",img:"photo-1548126032-079a0fb0099d"},
-
-{name:"Tracksuits",cat:"Sportswear",gender:"Men",img:"photo-1517836357463-d25dfeac3438"},
-{name:"Women's Dresses",cat:"Dresses",gender:"Women",img:"photo-1595777457583-95e059d581b8"},
-{name:"Maxi Dresses",cat:"Dresses",gender:"Women",img:"photo-1566174053879-31528523f8ae"},
-{name:"Evening Gowns",cat:"Dresses",gender:"Women",img:"photo-1566174053879-31528523f8ae"},
-{name:"Women's Skirts",cat:"Dresses",gender:"Women",img:"photo-1583496661160-fb5886a0aaaa"},
-
-{name:"Casual Sneakers",cat:"Shoes",gender:"Men",img:"photo-1542291026-7eec264c27ff"},
-{name:"Running Shoes",cat:"Shoes",gender:"Men",img:"photo-1460353581641-37baddab0fa2"},
-{name:"Women's Sneakers",cat:"Shoes",gender:"Women",img:"photo-1495555961986-6d4c1ecb7be3"},
-{name:"Formal Shoes",cat:"Shoes",gender:"Men",img:"photo-1614252235316-8c857d38b5f4"},
-{name:"Loafers",cat:"Shoes",gender:"Men",img:"photo-1531310197839-ccf54634509e"},
-{name:"Women's High Heels",cat:"Shoes",gender:"Women",img:"photo-1543163521-1bf539c55dd2"},
-{name:"Fashion Boots",cat:"Shoes",gender:"Women",img:"photo-1608256246200-53e635b5b65f"},
-{name:"Crocs Style Clogs",cat:"Shoes",gender:"All",img:"photo-1562273138-f46be4ebdf33"},
-{name:"Slides",cat:"Shoes",gender:"All",img:"photo-1603487742131-4160ec999306"},
-{name:"Slippers",cat:"Shoes",gender:"All",img:"photo-1543163521-1bf539c55dd2"},
-{name:"Sandals",cat:"Shoes",gender:"Women",img:"photo-1562273138-f46be4ebdf33"},
-
-{name:"Football Jerseys",cat:"Sportswear",gender:"All",img:"photo-1522778119026-d647f0596c20"},
-{name:"Football Training Kits",cat:"Sportswear",gender:"All",img:"photo-1574629810360-7efbbe195018"},
-{name:"Men's Sportswear",cat:"Sportswear",gender:"Men",img:"photo-1517836357463-d25dfeac3438"},
-{name:"Women's Activewear",cat:"Sportswear",gender:"Women",img:"photo-1518310383802-640c2de311b2"},
-
-{name:"Handbags",cat:"Bags",gender:"Women",img:"photo-1584917865442-de89df76afd3"},
-{name:"Shoulder Bags",cat:"Bags",gender:"Women",img:"photo-1590874103328-eac38a683ce7"},
-{name:"Backpacks",cat:"Bags",gender:"All",img:"photo-1553062407-98eeb64c6a62"},
-{name:"Travel Bags",cat:"Bags",gender:"All",img:"photo-1553062407-98eeb64c6a62"},
-{name:"Laptop Bags",cat:"Bags",gender:"All",img:"photo-1496181133206-80ce9b88a853"},
-
-{name:"Men's Watches",cat:"Wearables",gender:"Men",img:"photo-1524592094714-0f0654e20314"},
-{name:"Women's Watches",cat:"Wearables",gender:"Women",img:"photo-1523170335258-f5ed11844a49"},
-{name:"Smart Watches",cat:"Wearables",gender:"All",img:"photo-1523275335684-37898b6baf30"},
-{name:"Fashion Belts",cat:"Wearables",gender:"Men",img:"photo-1624222247344-550fb8b3e7f7"},
-{name:"Fashion Socks",cat:"Wearables",gender:"All",img:"photo-1586350977771-b3b0abd50c82"},
-{name:"Caps & Hats",cat:"Wearables",gender:"All",img:"photo-1588850561407-ed78c282e89b"},
-{name:"Beanies",cat:"Wearables",gender:"All",img:"photo-1576871337622-98d48d1cf531"},
-{name:"Scarves",cat:"Wearables",gender:"All",img:"photo-1601924994987-69e26d50dc26"},
-{name:"Ties",cat:"Wearables",gender:"Men",img:"photo-1589756823695-278bc923f962"}
+  // SPORTS AND ACCESSORIES
+  ["Football Jersey","Sportswear","https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=700"],
+  ["Football Training Kit","Sportswear","https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=700"],
+  ["Women's Activewear","Sportswear","https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=700"],
+  ["Men's Sportswear","Sportswear","https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=700"],
+  ["Backpack","Bags","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700"],
+  ["Travel Bag","Bags","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700"],
+  ["Fashion Belt","Men","https://images.unsplash.com/photo-1624222247344-550fb8c7c6f8?w=700"],
+  ["Fashion Watch","Men","https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=700"],
+  ["Fashion Cap","Men","https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=700"],
+  ["Fashion Socks","Men","https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=700"],
+  ["Slides","Shoes","https://images.unsplash.com/photo-1603487742131-4160ec999306?w=700"],
+  ["Slippers","Shoes","https://images.unsplash.com/photo-1603487742131-4160ec999306?w=700"],
+  ["Clogs","Shoes","https://images.unsplash.com/photo-1603487742131-4160ec999306?w=700"]
 ];
 
-let selectedCategory="All";
+const productsBox = document.getElementById("products");
+const searchBox = document.getElementById("search");
+let selectedCategory = "All";
 
-function imageURL(id){
- return "https://images.unsplash.com/"+id+"?auto=format&fit=crop&w=650&q=85";
+function showProducts(){
+  const query = searchBox.value.toLowerCase();
+  const filtered = products.filter(p =>
+    (selectedCategory === "All" ||
+     p[1] === selectedCategory ||
+     (selectedCategory === "Men" && p[1] === "Men") ||
+     (selectedCategory === "Women" && p[1] === "Women")) &&
+    p[0].toLowerCase().includes(query)
+  );
+
+  productsBox.innerHTML = filtered.map(p => `
+    <article class="card">
+      <img src="${p[2]}" alt="${p[0]}" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/600x700/07110d/d6b45b?text=EURO+FASHION'">
+      <div class="card-info">
+        <h3>${p[0]}</h3>
+        <p>Contact us for available colours, sizes and designs.</p>
+        <a class="btn" href="https://wa.me/256700787697?text=${encodeURIComponent('Hello EURO FASHION, I am interested in '+p[0])}" target="_blank">ENQUIRE ON WHATSAPP</a>
+      </div>
+    </article>
+  `).join("");
+
+  if(!filtered.length){
+    productsBox.innerHTML="<p>No matching products found. Try another search.</p>";
+  }
 }
 
-function renderProducts(){
- const search=document.getElementById("search").value.toLowerCase().trim();
-
- const filtered=products.filter(p=>{
-  const categoryMatch=selectedCategory==="All"||
-   p.gender===selectedCategory||p.cat===selectedCategory;
-  const searchMatch=(p.name+" "+p.cat+" "+p.gender).toLowerCase().includes(search);
-  return categoryMatch&&searchMatch;
- });
-
- document.getElementById("productCount").textContent=
- "Showing "+filtered.length+" fashion items";
-
- const grid=document.getElementById("productGrid");
-
- if(!filtered.length){
-  grid.innerHTML='<div class="no-results">No matching products found. Try another search.</div>';
-  return;
- }
-
- grid.innerHTML=filtered.map(p=>`
- <article class="card">
-  <div class="photo">
-   <span class="tag">${p.gender==="All"?"FASHION":p.gender.toUpperCase()}</span>
-   <img
-    src="${imageURL(p.img)}"
-    alt="${p.name}"
-    loading="lazy"
-    onerror="this.onerror=null;this.src='https://placehold.co/650x800/07110d/d8b45b?text='+encodeURIComponent('${p.name}')">
-  </div>
-  <div class="card-info">
-   <small>${p.cat}</small>
-   <h3>${p.name}</h3>
-   <a class="enquire" target="_blank" rel="noopener"
-    href="https://wa.me/256700787697?text=${encodeURIComponent('Hello EURO FASHION, I am interested in '+p.name+'. Please share more details and available options.')}">
-    ENQUIRE ON WHATSAPP ↗
-   </a>
-  </div>
- </article>
- `).join("");
-}
-
-document.getElementById("filters").addEventListener("click",function(e){
- const button=e.target.closest("button[data-category]");
- if(!button)return;
- selectedCategory=button.dataset.category;
- document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
- button.classList.add("active");
- renderProducts();
+document.querySelectorAll(".filter").forEach(button=>{
+  button.addEventListener("click",()=>{
+    document.querySelector(".filter.active").classList.remove("active");
+    button.classList.add("active");
+    selectedCategory=button.dataset.category;
+    showProducts();
+  });
 });
 
-function toggleMenu(){
- document.getElementById("navlinks").classList.toggle("show");
-}
-function closeMenu(){
- document.getElementById("navlinks").classList.remove("show");
-}
-
+searchBox.addEventListener("input",showProducts);
 document.getElementById("year").textContent=new Date().getFullYear();
-renderProducts();
+showProducts();
 </script></body>
 </html>
