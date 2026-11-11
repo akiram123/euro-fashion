@@ -4,53 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#061b12">
-<meta name="description" content="EURO FASHION — Clothing, shoes, jackets, bags and accessories.">
+<meta name="description" content="EURO FASHION — clothing, shoes, jackets, bags and accessories. Order through WhatsApp.">
 <title>EURO FASHION | Let's Keep Your Fresh Look</title>
-
 <style>
-:root{
---gold:#d9ad45;
---green:#087b3d;
---dark:#04130d;
---black:#050505;
-}
+:root{--gold:#d9ad45;--green:#087b3d;--deep:#04130d;--black:#050505}
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#050505;color:white;line-height:1.6}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:#fff;line-height:1.55}
 a{text-decoration:none;color:inherit}
 .wrap{width:min(1160px,92%);margin:auto}
-
-header{position:sticky;top:0;z-index:20;background:#050b08;border-bottom:1px solid #92702d}
+header{position:sticky;top:0;z-index:20;background:#050b08f5;border-bottom:1px solid #92702d}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1px;color:var(--gold);font-size:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1.5px;color:var(--gold);font-size:20px}
 .brand img{width:58px;height:58px;object-fit:contain;border-radius:50%}
 nav{display:flex;gap:24px;font-size:14px}
 nav a:hover{color:var(--gold)}
 .menu{display:none;background:none;color:white;border:0;font-size:28px}
-
-.hero{
-background:radial-gradient(ellipse at 50% 0%,#10502d,#071b11 48%,#050505 78%);
-text-align:center;padding:45px 0 85px
-}
-.hero-logo{width:min(360px,78vw);display:block;margin:0 auto 20px;border-radius:50%;box-shadow:0 12px 50px #000}
+.hero{background:radial-gradient(ellipse at 50% 0%,#10502d 0%,#071b11 48%,#050505 78%);text-align:center;padding:45px 0 85px}
+.hero-logo{width:min(360px,78vw);height:auto;display:block;margin:0 auto 20px;border-radius:50%;box-shadow:0 12px 50px #000}
 .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:bold}
-.hero h1{font-family:Georgia,serif;font-size:clamp(36px,7vw,66px);line-height:1.1;margin:15px 0}
+.hero h1{font: bold clamp(36px,7vw,66px)/1.1 Georgia,serif;margin:15px 0}
 .hero h1 span,.heading h2 span{color:var(--gold)}
 .hero p{color:#ddd;max-width:650px;margin:0 auto 25px}
 .btn{display:inline-block;padding:13px 22px;margin:5px;background:linear-gradient(120deg,#f1d27c,#b98724);color:#111;font-weight:bold;border-radius:4px}
 .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-
 .strip{background:#0b2116;border-block:1px solid #806329;padding:16px;text-align:center;color:#e9d59f;letter-spacing:1px;font-size:13px}
 .section{padding:72px 0}
 .heading{text-align:center;margin-bottom:35px}
 .heading small{color:var(--gold);letter-spacing:3px;text-transform:uppercase}
 .heading h2{font:bold clamp(28px,4vw,42px) Georgia,serif;margin:8px 0}
 .heading p{color:#aaa}
-
 .search{display:block;width:min(420px,100%);margin:0 auto 25px;padding:13px;background:#111;color:white;border:1px solid #806329;border-radius:4px}
 .filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:25px}
 .filters button{background:#102218;color:white;border:1px solid #806329;padding:9px 15px;border-radius:30px;cursor:pointer}
 .filters button.active,.filters button:hover{background:var(--gold);color:#111}
-
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:#101b14;border:1px solid #3b3320;border-radius:7px;overflow:hidden;transition:.25s}
 .card:hover{transform:translateY(-5px);border-color:var(--gold)}
@@ -59,67 +45,48 @@ text-align:center;padding:45px 0 85px
 .info h3{font-size:18px;color:#f4d78e}
 .info p{color:#aaa;font-size:13px;min-height:40px;margin:5px 0 12px}
 .order{color:var(--gold);font-weight:bold;font-size:14px}
-
 .about{background:#0a1b11;border-block:1px solid #40351f}
 .about-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:35px;align-items:center}
 .about-inner img{width:100%;max-width:380px;display:block;margin:auto;border-radius:8px}
 .about h2{font:bold 38px Georgia,serif;margin:10px 0}
 .about h2 span{color:var(--gold)}
 .about p{color:#bbb;margin:10px 0}
-
 .contact{text-align:center;background:linear-gradient(#07160e,#050505)}
 .contact p{color:#bbb;max-width:620px;margin:10px auto 20px}
 .contact-numbers{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .contact-numbers a{border:1px solid var(--gold);padding:12px 18px;border-radius:4px;color:#f4d78e}
 .contact-numbers a:hover{background:var(--gold);color:#111}
-
 footer{text-align:center;padding:28px 12px;background:#030604;border-top:1px solid #5d481f;color:#999;font-size:13px}
 footer strong{display:block;color:var(--gold);font: bold 23px Georgia,serif;margin-bottom:6px}
 .float{position:fixed;right:15px;bottom:18px;background:#168b49;color:white;padding:13px 17px;border-radius:35px;font-weight:bold;z-index:15}
-
 @media(max-width:800px){
 nav{display:none;position:absolute;top:78px;left:0;right:0;background:#06130c;padding:20px;flex-direction:column}
-nav.open{display:flex}
-.menu{display:block}
-.grid{grid-template-columns:repeat(2,1fr)}
+nav.open{display:flex}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}
 .about-inner{grid-template-columns:1fr;text-align:center}
 }
 @media(max-width:500px){
-.grid{gap:10px}
-.card img{height:180px}
-.info{padding:11px}
-.info h3{font-size:15px}
-.info p{font-size:12px}
-.section{padding:52px 0}
-.brand{font-size:16px}
-.brand img{width:48px;height:48px}
+.grid{gap:10px}.card img{height:180px}.info{padding:11px}
+.info h3{font-size:15px}.info p{font-size:12px}
+.section{padding:52px 0}.brand{font-size:16px}.brand img{width:48px;height:48px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="wrap nav">
-<a class="brand" href="#home">
-<img src="euro-fashion-logo.png" alt="EURO FASHION logo">
-<span>EURO FASHION</span>
-</a>
+<a class="brand" href="#home"><img data-euro-logo alt="EURO FASHION logo"><span>EURO FASHION</span></a>
 <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
 <nav>
-<a href="#home">Home</a>
-<a href="#collection">Collection</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<a href="#home">Home</a><a href="#collection">Collection</a><a href="#about">About</a><a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
 <main id="home">
-
 <section class="hero">
 <div class="wrap">
-<img class="hero-logo" src="euro-fashion-logo.png" alt="EURO FASHION">
+<img class="hero-logo" data-euro-logo alt="EURO FASHION logo">
 <div class="eyebrow">Style • Class • Confidence</div>
 <h1>Let's Keep Your <span>Fresh Look</span></h1>
 <p>Discover fashion for every day and every occasion. Explore our collection and order directly through WhatsApp. Contact us for the latest designs and prices.</p>
@@ -128,21 +95,16 @@ nav.open{display:flex}
 </div>
 </section>
 
-<div class="strip">
-CLOTHING ✦ SHOES ✦ JACKETS ✦ BAGS ✦ ACCESSORIES
-</div>
+<div class="strip">CLOTHING ✦ SHOES ✦ JACKETS ✦ BAGS ✦ ACCESSORIES</div>
 
 <section class="section" id="collection">
 <div class="wrap">
-
 <div class="heading">
 <small>Our Collection</small>
 <h2>Find Your <span>Fresh Look</span></h2>
 <p>Browse our fashion categories. Ask us for availability and prices.</p>
 </div>
-
 <input class="search" id="search" type="search" placeholder="Search clothes, shoes, bags...">
-
 <div class="filters">
 <button class="active" data-filter="all">All</button>
 <button data-filter="tops">Tops & Shirts</button>
@@ -152,14 +114,15 @@ CLOTHING ✦ SHOES ✦ JACKETS ✦ BAGS ✦ ACCESSORIES
 <button data-filter="bags">Bags</button>
 <button data-filter="accessories">Accessories</button>
 </div>
-
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+<!-- Products are added by JavaScript below -->
+</div>
 </div>
 </section>
 
 <section class="section about" id="about">
 <div class="wrap about-inner">
-<img src="euro-fashion-logo.png" alt="EURO FASHION brand logo">
+<img data-euro-logo alt="EURO FASHION brand logo">
 <div>
 <div class="eyebrow">Welcome to EURO FASHION</div>
 <h2>Look Good. <span>Feel Confident.</span></h2>
@@ -172,18 +135,14 @@ CLOTHING ✦ SHOES ✦ JACKETS ✦ BAGS ✦ ACCESSORIES
 
 <section class="section contact" id="contact">
 <div class="wrap">
-<div class="heading">
-<small>Let's Talk Fashion</small>
-<h2>Order Through <span>WhatsApp</span></h2>
-</div>
+<div class="heading"><small>Let's Talk Fashion</small><h2>Order Through <span>WhatsApp</span></h2></div>
 <p>Choose a contact below to ask about an item, check availability and receive its price. Please mention the product name when messaging.</p>
 <div class="contact-numbers">
-<a href="https://wa.me/256700787697" target="_blank" rel="noopener">WhatsApp · +256 700 787 697</a>
-<a href="https://wa.me/25765549608" target="_blank" rel="noopener">WhatsApp · +257 655 496 08</a>
+<a href="https://wa.me/256700787697" target="_blank" rel="noopener">Airtel WhatsApp · +256 700 787 697</a>
+<a href="https://wa.me/25765549608" target="_blank" rel="noopener">MTN WhatsApp · +257 655 496 08</a>
 </div>
 </div>
 </section>
-
 </main>
 
 <footer>
@@ -196,6 +155,9 @@ Clothing • Shoes • Jackets • Bags & More<br>
 <a class="float" href="https://wa.me/256700787697" target="_blank" rel="noopener">WhatsApp Us</a>
 
 <script>
+const EURO_FASHION_LOGO = 'LOGO_DATA_PLACEHOLDER';
+document.querySelectorAll('[data-euro-logo]').forEach(img => img.src = EURO_FASHION_LOGO);
+
 const products = [
 ["Men's Polo Shirts","tops","https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=800&q=80"],
 ["Women's Blouses","tops","https://images.unsplash.com/photo-1564257577-0a5c9c2d9e7f?auto=format&fit=crop&w=800&q=80"],
@@ -210,7 +172,6 @@ const products = [
 ["Sweaters","tops","https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80"],
 ["Cardigans","tops","https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80"],
 ["Blazers","tops","https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80"],
-
 ["Men's Trousers","bottoms","https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80"],
 ["Women's Trousers","bottoms","https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80"],
 ["Jeans","bottoms","https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80"],
@@ -222,7 +183,6 @@ const products = [
 ["Chinos","bottoms","https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80"],
 ["Ladies' Skirts","bottoms","https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=800&q=80"],
 ["Dresses","bottoms","https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"],
-
 ["Jumpers","outerwear","https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80"],
 ["Hoodies","outerwear","https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"],
 ["Jackets","outerwear","https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80"],
@@ -231,19 +191,16 @@ const products = [
 ["Leather Jackets","outerwear","https://images.unsplash.com/photo-1520975958225-35b6f3d2b7f2?auto=format&fit=crop&w=800&q=80"],
 ["Sweatshirts","outerwear","https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=800&q=80"],
 ["Tracksuits","outerwear","https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80"],
-
 ["Sneakers","shoes","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"],
 ["Casual Shoes","shoes","https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80"],
 ["Formal Shoes","shoes","https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=800&q=80"],
 ["Sandals","shoes","https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=800&q=80"],
 ["Heels","shoes","https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80"],
 ["Boots","shoes","https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80"],
-
 ["Handbags","bags","https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"],
 ["Backpacks","bags","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"],
 ["Travel Bags","bags","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"],
 ["Crossbody Bags","bags","https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"],
-
 ["Watches","accessories","https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"],
 ["Sunglasses","accessories","https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80"],
 ["Belts","accessories","https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80"],
@@ -278,7 +235,6 @@ grid.appendChild(card);
 }
 });
 }
-
 buttons.forEach(button=>{
 button.addEventListener("click",()=>{
 buttons.forEach(b=>b.classList.remove("active"));
@@ -287,11 +243,9 @@ category=button.dataset.filter;
 showProducts();
 });
 });
-
 search.addEventListener("input",showProducts);
 document.getElementById("year").textContent=new Date().getFullYear();
 showProducts();
 </script>
-
 </body>
 </html>
