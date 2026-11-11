@@ -2,106 +2,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07110d">
+<meta name="theme-color" content="#050806">
 <title>EURO FASHION | Style Without Limits</title>
+<meta name="description" content="Discover men's and women's fashion at EURO FASHION, Entebbe Uganda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"><style>
 :root{
---black:#07110d;--dark:#101a15;--green:#087747;
---gold:#d6b35b;--white:#fff;--light:#f5f6f2;
+ --black:#050806;
+ --dark:#0b120d;
+ --green:#006b3c;
+ --emerald:#008f52;
+ --gold:#d8b45b;
+ --gold-light:#f0d58b;
+ --white:#ffffff;
+ --light:#f7f7f3;
+ --text:#202820;
+ --muted:#707970;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--light);color:#17221c}
+body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--text)}
 a{text-decoration:none;color:inherit}
-.topbar{background:#020805;color:#eee;text-align:center;padding:9px;font-size:12px;letter-spacing:1.2px}
-header{background:var(--black);color:white;position:sticky;top:0;z-index:1000;border-bottom:1px solid #66552c}
-.nav{max-width:1250px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:54px;height:54px;object-fit:contain}
-.brand-name{font:800 23px 'Playfair Display',serif;letter-spacing:1px}
-.brand-name span{color:var(--gold)}
-.brand small{display:block;color:#b8c2bb;font:9px 'DM Sans';letter-spacing:3px;margin-top:3px}
-.navlinks{display:flex;align-items:center;gap:23px;font-size:13px}
-.navlinks a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:#111;padding:11px 16px;border-radius:5px;font-weight:800}
-.menu-btn{display:none;background:none;border:0;color:white;font-size:26px}
-.hero{min-height:490px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,12,8,.96),rgba(3,12,8,.68),rgba(3,12,8,.2)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-content{max-width:1250px;width:100%;margin:auto;padding:75px 25px}
-.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:800}
-.hero h1{font:800 clamp(42px,7vw,76px)/1.04 'Playfair Display',serif;max-width:700px;margin:18px 0}
-.hero h1 span{color:var(--gold)}
-.hero p{color:#e1e7e2;max-width:510px;line-height:1.8;font-size:15px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:14px 21px;border-radius:4px;font-size:12px;font-weight:800}
-.btn-gold{background:var(--gold);color:#101510}
-.btn-outline{border:1px solid white;color:white}
-.features{background:white;display:grid;grid-template-columns:repeat(3,1fr);max-width:1150px;margin:-28px auto 0;position:relative;box-shadow:0 10px 35px #0000000c;border-radius:8px}
-.feature{text-align:center;padding:23px 12px;border-right:1px solid #eee}
-.feature:last-child{border:0}
-.feature strong{display:block;font-size:13px;margin-bottom:5px}
-.feature span{font-size:11px;color:#777}
-.section{max-width:1250px;margin:auto;padding:65px 22px}
-.section-heading{text-align:center;margin-bottom:28px}
-.section-heading small{color:var(--green);font-weight:800;letter-spacing:3px;font-size:10px}
-.section-heading h2{font:700 35px 'Playfair Display',serif;margin:10px 0;color:#142019}
-.section-heading p{color:#777;font-size:13px}
-.toolbar{display:flex;gap:12px;margin-bottom:20px}
-.search{width:100%;border:1px solid #e0e5e0;border-radius:5px;padding:13px 15px;background:white;outline:none}
-.search:focus{border-color:var(--green)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
-.filter{border:1px solid #dce3dd;background:white;color:#425047;padding:9px 14px;border-radius:30px;font-size:11px;font-weight:700;cursor:pointer}
-.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:white}
-.product-count{font-size:12px;color:#777;margin-bottom:15px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
-.card{background:white;border-radius:7px;overflow:hidden;box-shadow:0 4px 18px #12251a0a;transition:.25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 12px 25px #12251a18}
-.photo{height:260px;background:#e8ece8;position:relative;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
-.card:hover .photo img{transform:scale(1.045)}
-.tag{position:absolute;top:12px;left:12px;background:var(--green);color:white;padding:6px 9px;font-size:9px;font-weight:800;letter-spacing:1px;border-radius:2px;z-index:1}
-.card-info{padding:15px}
-.card-info small{color:var(--green);font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.card-info h3{font-size:14px;margin:7px 0 12px}
-.enquire{display:block;text-align:center;background:#10251a;color:white;padding:11px;border-radius:4px;font-size:11px;font-weight:800}
-.enquire:hover{background:var(--green)}
-.no-results{text-align:center;padding:45px;color:#777;grid-column:1/-1}
-.banner{background:linear-gradient(100deg,#07110d,#0d5635);color:white;padding:48px 22px;text-align:center}
-.banner h2{font:700 32px 'Playfair Display',serif;margin-bottom:12px}
-.banner p{color:#d4e0d8;font-size:13px;margin-bottom:20px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-image{height:350px;border-radius:8px;overflow:hidden}
-.about-image img{width:100%;height:100%;object-fit:cover}
-.about-text h2{font:700 35px 'Playfair Display',serif;margin:12px 0}
-.about-text p{color:#69756d;line-height:1.9;font-size:13px;margin-bottom:15px}
-.contact{background:#07110d;color:white;padding:65px 22px;text-align:center}
-.contact h2{font:700 36px 'Playfair Display',serif;margin:12px 0}
-.contact p{color:#bdc8c0;font-size:13px;line-height:1.8}
-.contact-cards{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:28px auto}
-.contact-card{background:#14231a;border:1px solid #294b36;border-radius:6px;padding:17px 23px;min-width:220px}
-.contact-card small{display:block;color:var(--gold);font-size:10px;margin-bottom:8px}
-.contact-card strong{font-size:15px}
-footer{background:#020805;color:#a9b4ac;padding:22px;text-align:center;font-size:11px}
-footer strong{color:var(--gold)}
-.float-wa{position:fixed;bottom:20px;right:18px;z-index:999;background:#20bd65;color:white;padding:14px 18px;border-radius:50px;font-weight:800;font-size:12px;box-shadow:0 5px 20px #0003}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:650px){
-.nav{padding:11px 15px}.brand-name{font-size:19px}.brand img{width:44px;height:44px}
-.menu-btn{display:block}
-.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#07110d;padding:22px;flex-direction:column;align-items:stretch}
-.navlinks.show{display:flex}.nav-cta{text-align:center}
-.hero{min-height:470px}.hero-content{padding:65px 20px}
-.features{margin:0;border-radius:0}
-.feature{padding:17px 6px}.feature strong{font-size:11px}.feature span{font-size:9px}
-.section{padding:48px 14px}.section-heading h2{font-size:29px}
-.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
-.photo{height:205px}.card-info{padding:11px}.card-info h3{font-size:12px}
-.enquire{font-size:10px;padding:10px}
-.about{grid-template-columns:1fr;gap:22px}.about-image{height:260px}
-.contact h2{font-size:30px}
+button,input{font:inherit}
+
+/* TOP BAR */
+.topbar{
+ background:var(--green);color:white;text-align:center;
+ padding:9px 12px;font-size:11px;font-weight:700;
+ letter-spacing:2px
 }
-@media(max-width:360px){.photo{height:170px}.brand-name{font-size:16px}}
+
+/* NAVIGATION */
+header{
+ background:var(--black);color:white;position:sticky;
+ top:0;z-index:1000;border-bottom:2px solid var(--gold)
+}
+.nav{
+ max-width:1250px;margin:auto;padding:13px 22px;
+ display:flex;align-items:center;justify-content:space-between;gap:18px
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:55px;height:55px;object-fit:contain}
+.brand-name{
+ font:800 23px 'Playfair Display',serif;
+ letter-spacing:1px;color:white
+}
+.brand-name span{color:var(--gold)}
+.brand small{
+ display:block;color:#16a66a;font:800 9px 'DM Sans',sans-serif;
+ letter-spacing:3px;margin-top:4px
+}
+.navlinks{display:flex;align-items:center;gap:23px;font-size:13px}
+.navlinks a{transition:.2s}
+.navlinks a:hover{color:var(--gold)}
+.nav-cta{
+ background:var(--gold);color:#080b08;padding:12px 17px;
+ border-radius:3px;font-weight:800
+}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:27px}
+
+/* HERO */
+.hero{
+ min-height:510px;display:flex;align-items:center;color:white;
+ background:
+ linear-gradient(90deg,rgba(2,7,4,.97),rgba(2,7,4,.78),rgba(2,7,4,.25)),
+ url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center/cover
+}
+.hero-content{max-width:1250px;width:100%;margin:auto;padding:75px 25px}
+.eyebrow{
+ color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:800
+}
+.hero h1{
+ font:800 clamp(43px,7vw,78px)/1.05 'Playfair Display',serif;
+ max-width:720px;margin:20px 0
+}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#e1e8e2;max-width:510px;line-height:1.9;font-size:15px}
+.hero-buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:29px}
+.btn{
+ display:inline-block;padding:14px 22px;border-radius:3px;
+ font-size:11px;font-weight:800;letter-spacing:1px;transition:.2s
+}
+.btn-gold{background:var(--gold);color:#080b08}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{border:1px solid white;color:white}
+.btn-outline:hover{background:var(--green);border-color:var(--green)}
+
+/* FEATURES */
+.features{
+ background:white;display:grid;grid-template-columns:repeat(3,1fr);
+ max-width:1150px;margin:-25px auto 0;position:relative;
+ border-top:3px solid var(--gold);
+ box-shadow:0 10px 35px #0000000c
+}
+.feature{text-align:center;padding:24px 12px;border-right:1px solid #e9eee9}
+.feature:last-child{border:0}
+.feature strong{display:block;font-size:13px;margin-bottom:6px;color:var(--green)}
+.feature span{font-size:11px;color:#777}
+
+/* COLLECTION */
+.section{max-width:1250px;margin:auto;padding:65px 22px}
+.section-heading{text-align:center;margin-bottom:30px}
+.section-heading small{
+ color:var(--green);font-weight:800;letter-spacing:3px;font-size:10px
+}
+.section-heading h2{
+ font:700 36px 'Playfair Display',serif;margin:11px 0;color:var(--black)
+}
+.section-heading p{color:var(--muted);font-size:13px}
+.toolbar{display:flex;gap:12px;margin-bottom:20px}
+.search{
+ width:100%;border:1px solid #dce4dc;border-radius:3px;
+ padding:14px 16px;background:white;outline:none
+}
+.search:focus{border:1px solid var(--green);box-shadow:0 0 0 2px #008f5215}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
+.filter{
+ border:1px solid #d8e0d8;background:white;color:#344238;
+ padding:10px 15px;border-radius:2px;font-size:11px;
+ font-weight:700;cursor:pointer;transition:.2s
+}
+.filter.active,.filter:hover{
+ background:var(--green);border-color:var(--green);color:white
+}
+.product-count{font-size:12px;color:#69766c;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
+.card{
+ background:white;border-radius:3px;overflow:hidden;
+ border:1px solid #e9ece8;transition:.25s
+}
+.card:hover{
+ transform:translateY(-5px);
+ box-shadow:0 12px 28px #10251a18;
+ border-color:var(--gold)
+}
+.photo{
+ height:270px;background:#e7ebe6;position:relative;overflow:hidden
+}
+.photo img{
+ width:100%;height:100%;object-fit:cover;display:block;
+ transition:transform .4s
+}
+.card:hover .photo img{transform:scale(1.05)}
+.tag{
+ position:absolute;top:12px;left:12px;background:var(--green);
+ color:white;padding:7px 10px;font-size:9px;
+ font-weight:800;letter-spacing:1px;z-index:2
+}
+.card-info{padding:15px}
+.card-info small{
+ color:var(--green);font-size:9px;font-weight:800;
+ letter-spacing:1px;text-transform:uppercase
+}
+.card-info h3{font-size:14px;margin:8px 0 13px;color:#17231b}
+.enquire{
+ display:block;text-align:center;background:var(--black);
+ color:white;padding:12px;border-radius:2px;
+ font-size:10px;font-weight:800;letter-spacing:.5px
+}
+.enquire:hover{background:var(--green)}
+.no-results{
+ text-align:center;padding:45px;color:#777;grid-column:1/-1
+}
+
+/* PROMOTION */
+.banner{
+ background:linear-gradient(110deg,#030704,#005a32);
+ color:white;padding:55px 22px;text-align:center;
+ border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)
+}
+.banner h2{font:700 34px 'Playfair Display',serif;margin-bottom:12px}
+.banner p{color:#d4e0d8;font-size:13px;margin-bottom:22px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-image{height:360px;border-radius:3px;overflow:hidden;border:4px solid white;box-shadow:0 5px 25px #0002}
+.about-image img{width:100%;height:100%;object-fit:cover}
+.about-text h2{font:700 36px 'Playfair Display',serif;margin:13px 0;color:var(--black)}
+.about-text p{color:#69756d;line-height:1.9;font-size:13px;margin-bottom:16px}
+
+/* CONTACT */
+.contact{
+ background:var(--black);color:white;padding:68px 22px;text-align:center;
+ border-top:3px solid var(--gold)
+}
+.contact h2{font:700 36px 'Playfair Display',serif;margin:13px 0}
+.contact p{color:#bdc8c0;font-size:13px;line-height:1.9}
+.contact-cards{
+ display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px auto
+}
+.contact-card{
+ background:#101b13;border:1px solid #17663f;
+ border-bottom:3px solid var(--gold);
+ padding:19px 24px;min-width:220px
+}
+.contact-card small{display:block;color:var(--gold);font-size:10px;margin-bottom:9px;letter-spacing:1px}
+.contact-card strong{font-size:15px}
+.contact-card a:hover{color:var(--gold)}
+footer{
+ background:#020402;color:#a9b4ac;padding:23px;
+ text-align:center;font-size:11px;border-top:1px solid #145a36
+}
+footer strong{color:var(--gold)}
+.float-wa{
+ position:fixed;bottom:20px;right:18px;z-index:999;
+ background:#087747;color:white;padding:15px 19px;
+ border:1px solid var(--gold);border-radius:3px;
+ font-weight:800;font-size:12px;box-shadow:0 5px 20px #0004
+}
+.float-wa:hover{background:#009b59}
+
+/* MOBILE */
+@media(max-width:900px){
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .navlinks{gap:13px}
+}
+@media(max-width:650px){
+ .nav{padding:11px 15px}
+ .brand-name{font-size:19px}
+ .brand img{width:45px;height:45px}
+ .menu-btn{display:block}
+ .navlinks{
+  display:none;position:absolute;top:70px;left:0;right:0;
+  background:var(--black);padding:22px;
+  flex-direction:column;align-items:stretch;
+  border-bottom:2px solid var(--gold)
+ }
+ .navlinks.show{display:flex}
+ .nav-cta{text-align:center}
+ .hero{min-height:470px}
+ .hero-content{padding:65px 20px}
+ .features{margin:0}
+ .feature{padding:18px 5px}
+ .feature strong{font-size:10px}
+ .feature span{font-size:9px}
+ .section{padding:48px 14px}
+ .section-heading h2{font-size:30px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+ .photo{height:210px}
+ .card-info{padding:11px}
+ .card-info h3{font-size:12px}
+ .enquire{font-size:9px;padding:11px 5px}
+ .about{grid-template-columns:1fr;gap:23px}
+ .about-image{height:270px}
+ .contact h2{font-size:30px}
+}
+@media(max-width:360px){
+ .photo{height:175px}
+ .brand-name{font-size:16px}
+}
 </style></head><body>
-<div class="topbar">WELCOME TO EURO FASHION • ENTEBBE, UGANDA</div><header>
+<div class="topbar">EURO FASHION &nbsp; • &nbsp; STYLE WITHOUT LIMITS &nbsp; • &nbsp; ENTEBBE, UGANDA</div><header>
 <nav class="nav">
 <a href="#" class="brand">
 <img src="euro-fashion-logo.png" alt="EURO FASHION Logo" onerror="this.style.display='none'">
@@ -136,11 +288,9 @@ footer strong{color:var(--gold)}
 <small>DISCOVER YOUR LOOK</small>
 <h2>Explore Our Collection</h2>
 <p>Find your next favourite style.</p>
-</div>
-<div class="toolbar">
+</div><div class="toolbar">
 <input class="search" id="search" type="search" placeholder="Search for shirts, shoes, jeans..." oninput="renderProducts()">
-</div>
-<div class="filters" id="filters">
+</div><div class="filters" id="filters">
 <button class="filter active" data-category="All">All Collection</button>
 <button class="filter" data-category="Men">Men</button>
 <button class="filter" data-category="Women">Women</button>
@@ -152,8 +302,7 @@ footer strong{color:var(--gold)}
 <button class="filter" data-category="Sportswear">Sportswear</button>
 <button class="filter" data-category="Bags">Bags</button>
 <button class="filter" data-category="Wearables">Other Wearables</button>
-</div>
-<div class="product-count" id="productCount"></div>
+</div><div class="product-count" id="productCount"></div>
 <div class="grid" id="productGrid"></div>
 </section><section class="banner">
 <h2>Fashion That Defines You</h2>
@@ -175,90 +324,107 @@ footer strong{color:var(--gold)}
 <h2>Find Your Style With Us</h2>
 <p>Have a question about an item? Contact EURO FASHION directly.<br>We are located in Entebbe, Uganda.</p>
 <div class="contact-cards">
-<div class="contact-card"><small>WHATSAPP / CALL 1</small><strong><a href="https://wa.me/256700787697">+256 700 787 697</a></strong></div>
-<div class="contact-card"><small>WHATSAPP / CALL 2</small><strong><a href="https://wa.me/25665549608">+256 655 496 08</a></strong></div>
-<div class="contact-card"><small>OUR LOCATION</small><strong>Entebbe, Uganda</strong></div>
+<div class="contact-card">
+<small>WHATSAPP / CALL 1</small>
+<strong><a href="https://wa.me/256700787697">+256 700 787 697</a></strong>
+</div>
+<div class="contact-card">
+<small>WHATSAPP / CALL 2</small>
+<strong><a href="https://wa.me/25665549608">+256 655 496 08</a></strong>
+</div>
+<div class="contact-card">
+<small>OUR LOCATION</small>
+<strong>Entebbe, Uganda</strong>
+</div>
 </div>
 <a href="https://wa.me/256700787697?text=Hello%20EURO%20FASHION%2C%20I%20would%20like%20to%20make%20an%20enquiry." class="btn btn-gold">MESSAGE EURO FASHION</a>
 </section>
 </main><footer>© <span id="year"></span> <strong>EURO FASHION</strong> · STYLE WITHOUT LIMITS · ENTEBBE, UGANDA</footer>
 <a class="float-wa" href="https://wa.me/256700787697">WhatsApp Us ↗</a><script>
 /*
- Each product has its own search tags and unique image lock number.
- This prevents every product from reusing one shared photograph.
+  Product images are individually assigned fixed Unsplash image URLs.
+  They are not random keyword searches.
+  Image subjects are representative catalogue photography, not guaranteed
+  to be the exact stock item available in the shop.
 */
 const products = [
-["Men's Polo Shirts","Tops","Men","men,polo,shirt"],
-["Men's T-Shirts","Tops","Men","men,tshirt,clothing"],
-["Men's Formal Shirts","Tops","Men","men,formal,dress,shirt"],
-["Men's Casual Shirts","Tops","Men","men,casual,shirt"],
-["Women's Blouses","Tops","Women","women,blouse,fashion"],
-["Women's T-Shirts","Tops","Women","women,tshirt,clothing"],
-["Crop Tops","Tops","Women","women,crop,top"],
-["Tank Tops","Tops","Women","women,tank,top"],
-["Long Sleeve Tops","Tops","Women","women,long,sleeve,top"],
-["Men's Jeans","Bottoms","Men","men,blue,jeans"],
-["Women's Jeans","Bottoms","Women","women,denim,jeans"],
-["Women's Leggings","Bottoms","Women","women,leggings"],
-["Cargo Trousers","Bottoms","Men","men,cargo,trousers"],
-["Men's Chinos","Bottoms","Men","men,chinos,trousers"],
-["Joggers","Bottoms","Men","men,joggers,pants"],
-["Women's Shorts","Bottoms","Women","women,shorts"],
-["Men's Shorts","Bottoms","Men","men,shorts"],
-["Knit Sweaters","Outerwear","Women","women,knit,sweater"],
-["Women's Jumpers","Outerwear","Women","women,jumper,knitwear"],
-["Men's Jumpers","Outerwear","Men","men,jumper,sweater"],
-["Hoodies","Outerwear","Men","men,hoodie,sweatshirt"],
-["Leather Jackets","Outerwear","Men","men,leather,jacket"],
-["Denim Jackets","Outerwear","Women","women,denim,jacket"],
-["Women's Jackets","Outerwear","Women","women,fashion,jacket"],
-["Tracksuits","Sportswear","Men","men,tracksuit,sportswear"],
-["Women's Dresses","Dresses","Women","women,dress,fashion"],
-["Maxi Dresses","Dresses","Women","women,maxi,dress"],
-["Evening Gowns","Dresses","Women","women,evening,gown"],
-["Women's Skirts","Dresses","Women","women,skirt,fashion"],
-["Casual Sneakers","Shoes","Men","men,sneakers,shoes"],
-["Running Shoes","Shoes","Men","running,shoes,sneakers"],
-["Women's Sneakers","Shoes","Women","women,sneakers,shoes"],
-["Formal Shoes","Shoes","Men","men,formal,leather,shoes"],
-["Loafers","Shoes","Men","men,loafers,shoes"],
-["Women's High Heels","Shoes","Women","women,high,heels,shoes"],
-["Fashion Boots","Shoes","Women","women,boots,shoes"],
-["Crocs Style Clogs","Shoes","All","clogs,crocs,shoes"],
-["Slides","Shoes","All","slides,footwear"],
-["Slippers","Shoes","All","slippers,footwear"],
-["Sandals","Shoes","Women","women,sandals,footwear"],
-["Football Jerseys","Sportswear","All","football,jersey,soccer"],
-["Football Training Kits","Sportswear","All","football,training,kit"],
-["Men's Sportswear","Sportswear","Men","men,fitness,sportswear"],
-["Women's Activewear","Sportswear","Women","women,activewear,fitness"],
-["Handbags","Bags","Women","women,handbag,purse"],
-["Shoulder Bags","Bags","Women","women,shoulder,bag"],
-["Backpacks","Bags","All","backpack,bag"],
-["Travel Bags","Bags","All","travel,duffel,bag"],
-["Laptop Bags","Bags","All","laptop,bag,briefcase"],
-["Men's Watches","Wearables","Men","men,wristwatch"],
-["Women's Watches","Wearables","Women","women,wristwatch"],
-["Smart Watches","Wearables","All","smartwatch,wristwatch"],
-["Fashion Belts","Wearables","Men","leather,belt,fashion"],
-["Fashion Socks","Wearables","All","colorful,fashion,socks"],
-["Caps & Hats","Wearables","All","baseball,cap,hat"],
-["Beanies","Wearables","All","knit,beanie,hat"],
-["Scarves","Wearables","All","fashion,scarf"]
+{name:"Men's Polo Shirts",cat:"Tops",gender:"Men",img:"photo-1625910513413-5fc45e6d5f30"},
+{name:"Men's T-Shirts",cat:"Tops",gender:"Men",img:"photo-1521572163474-6864f9cf17ab"},
+{name:"Men's Formal Shirts",cat:"Tops",gender:"Men",img:"photo-1603252109303-2751441dd157"},
+{name:"Men's Casual Shirts",cat:"Tops",gender:"Men",img:"photo-1598033129183-c4f50c736f10"},
+{name:"Women's Blouses",cat:"Tops",gender:"Women",img:"photo-1564257577-5f8d6e5f7e5c"},
+{name:"Women's T-Shirts",cat:"Tops",gender:"Women",img:"photo-1503342217505-b0a15ec3261c"},
+{name:"Crop Tops",cat:"Tops",gender:"Women",img:"photo-1551163943-3f6a855d1153"},
+{name:"Tank Tops",cat:"Tops",gender:"Women",img:"photo-1503341455253-b2e723bb3dbb"},
+{name:"Long Sleeve Tops",cat:"Tops",gender:"Women",img:"photo-1483985988355-763728e1935b"},
+
+{name:"Men's Jeans",cat:"Bottoms",gender:"Men",img:"photo-1542272604-787c3835535d"},
+{name:"Women's Jeans",cat:"Bottoms",gender:"Women",img:"photo-1541099649105-f69ad21f3246"},
+{name:"Women's Leggings",cat:"Bottoms",gender:"Women",img:"photo-1506629905607-d9a9c8e7c4f0"},
+{name:"Cargo Trousers",cat:"Bottoms",gender:"Men",img:"photo-1515886657613-9f3515b0c78f"},
+{name:"Men's Chinos",cat:"Bottoms",gender:"Men",img:"photo-1473966968600-fa801b869a1a"},
+{name:"Joggers",cat:"Bottoms",gender:"Men",img:"photo-1551488831-00ddcb6c6bd3"},
+{name:"Women's Shorts",cat:"Bottoms",gender:"Women",img:"photo-1591195853828-11db59a44f6b"},
+{name:"Men's Shorts",cat:"Bottoms",gender:"Men",img:"photo-1598033129183-c4f50c736f10"},
+
+{name:"Knit Sweaters",cat:"Outerwear",gender:"Women",img:"photo-1576566588028-4147f3842f27"},
+{name:"Women's Jumpers",cat:"Outerwear",gender:"Women",img:"photo-1618354691373-d851c5c3a990"},
+{name:"Men's Jumpers",cat:"Outerwear",gender:"Men",img:"photo-1618354691229-88d47f285158"},
+{name:"Hoodies",cat:"Outerwear",gender:"Men",img:"photo-1556821840-3a63f95609a7"},
+{name:"Leather Jackets",cat:"Outerwear",gender:"Men",img:"photo-1520975958225-5b3e7e4f3a6f"},
+{name:"Denim Jackets",cat:"Outerwear",gender:"Women",img:"photo-1543076447-215ad9ba6923"},
+{name:"Women's Jackets",cat:"Outerwear",gender:"Women",img:"photo-1548126032-079a0fb0099d"},
+
+{name:"Tracksuits",cat:"Sportswear",gender:"Men",img:"photo-1517836357463-d25dfeac3438"},
+{name:"Women's Dresses",cat:"Dresses",gender:"Women",img:"photo-1595777457583-95e059d581b8"},
+{name:"Maxi Dresses",cat:"Dresses",gender:"Women",img:"photo-1566174053879-31528523f8ae"},
+{name:"Evening Gowns",cat:"Dresses",gender:"Women",img:"photo-1566174053879-31528523f8ae"},
+{name:"Women's Skirts",cat:"Dresses",gender:"Women",img:"photo-1583496661160-fb5886a0aaaa"},
+
+{name:"Casual Sneakers",cat:"Shoes",gender:"Men",img:"photo-1542291026-7eec264c27ff"},
+{name:"Running Shoes",cat:"Shoes",gender:"Men",img:"photo-1460353581641-37baddab0fa2"},
+{name:"Women's Sneakers",cat:"Shoes",gender:"Women",img:"photo-1495555961986-6d4c1ecb7be3"},
+{name:"Formal Shoes",cat:"Shoes",gender:"Men",img:"photo-1614252235316-8c857d38b5f4"},
+{name:"Loafers",cat:"Shoes",gender:"Men",img:"photo-1531310197839-ccf54634509e"},
+{name:"Women's High Heels",cat:"Shoes",gender:"Women",img:"photo-1543163521-1bf539c55dd2"},
+{name:"Fashion Boots",cat:"Shoes",gender:"Women",img:"photo-1608256246200-53e635b5b65f"},
+{name:"Crocs Style Clogs",cat:"Shoes",gender:"All",img:"photo-1562273138-f46be4ebdf33"},
+{name:"Slides",cat:"Shoes",gender:"All",img:"photo-1603487742131-4160ec999306"},
+{name:"Slippers",cat:"Shoes",gender:"All",img:"photo-1543163521-1bf539c55dd2"},
+{name:"Sandals",cat:"Shoes",gender:"Women",img:"photo-1562273138-f46be4ebdf33"},
+
+{name:"Football Jerseys",cat:"Sportswear",gender:"All",img:"photo-1522778119026-d647f0596c20"},
+{name:"Football Training Kits",cat:"Sportswear",gender:"All",img:"photo-1574629810360-7efbbe195018"},
+{name:"Men's Sportswear",cat:"Sportswear",gender:"Men",img:"photo-1517836357463-d25dfeac3438"},
+{name:"Women's Activewear",cat:"Sportswear",gender:"Women",img:"photo-1518310383802-640c2de311b2"},
+
+{name:"Handbags",cat:"Bags",gender:"Women",img:"photo-1584917865442-de89df76afd3"},
+{name:"Shoulder Bags",cat:"Bags",gender:"Women",img:"photo-1590874103328-eac38a683ce7"},
+{name:"Backpacks",cat:"Bags",gender:"All",img:"photo-1553062407-98eeb64c6a62"},
+{name:"Travel Bags",cat:"Bags",gender:"All",img:"photo-1553062407-98eeb64c6a62"},
+{name:"Laptop Bags",cat:"Bags",gender:"All",img:"photo-1496181133206-80ce9b88a853"},
+
+{name:"Men's Watches",cat:"Wearables",gender:"Men",img:"photo-1524592094714-0f0654e20314"},
+{name:"Women's Watches",cat:"Wearables",gender:"Women",img:"photo-1523170335258-f5ed11844a49"},
+{name:"Smart Watches",cat:"Wearables",gender:"All",img:"photo-1523275335684-37898b6baf30"},
+{name:"Fashion Belts",cat:"Wearables",gender:"Men",img:"photo-1624222247344-550fb8b3e7f7"},
+{name:"Fashion Socks",cat:"Wearables",gender:"All",img:"photo-1586350977771-b3b0abd50c82"},
+{name:"Caps & Hats",cat:"Wearables",gender:"All",img:"photo-1588850561407-ed78c282e89b"},
+{name:"Beanies",cat:"Wearables",gender:"All",img:"photo-1576871337622-98d48d1cf531"},
+{name:"Scarves",cat:"Wearables",gender:"All",img:"photo-1601924994987-69e26d50dc26"},
+{name:"Ties",cat:"Wearables",gender:"Men",img:"photo-1589756823695-278bc923f962"}
 ];
 
 let selectedCategory="All";
 
-function makeImage(tags,index){
- return "https://loremflickr.com/650/800/"+encodeURIComponent(tags)+"?lock="+(index+731);
+function imageURL(id){
+ return "https://images.unsplash.com/"+id+"?auto=format&fit=crop&w=650&q=85";
 }
 
 function renderProducts(){
  const search=document.getElementById("search").value.toLowerCase().trim();
 
- const filtered=products.map((p,index)=>({...{
-  name:p[0],cat:p[1],gender:p[2],tags:p[3],index
- }})).filter(p=>{
+ const filtered=products.filter(p=>{
   const categoryMatch=selectedCategory==="All"||
    p.gender===selectedCategory||p.cat===selectedCategory;
   const searchMatch=(p.name+" "+p.cat+" "+p.gender).toLowerCase().includes(search);
@@ -280,10 +446,10 @@ function renderProducts(){
   <div class="photo">
    <span class="tag">${p.gender==="All"?"FASHION":p.gender.toUpperCase()}</span>
    <img
-    src="${makeImage(p.tags,p.index)}"
+    src="${imageURL(p.img)}"
     alt="${p.name}"
     loading="lazy"
-    onerror="this.onerror=null;this.src='https://placehold.co/650x800/10251a/d6b35b?text='+encodeURIComponent('${p.name}')">
+    onerror="this.onerror=null;this.src='https://placehold.co/650x800/07110d/d8b45b?text='+encodeURIComponent('${p.name}')">
   </div>
   <div class="card-info">
    <small>${p.cat}</small>
@@ -312,6 +478,7 @@ function toggleMenu(){
 function closeMenu(){
  document.getElementById("navlinks").classList.remove("show");
 }
+
 document.getElementById("year").textContent=new Date().getFullYear();
 renderProducts();
 </script></body>
