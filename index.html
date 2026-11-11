@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b12">
+
+<title>EURO FASHION | Style Without Limits</title>
+<meta name="description" content="EURO FASHION – Explore men's and women's fashion, clothing, shoes, bags and accessories. Order through WhatsApp.">
+
+<style>
+:root {
+ --green:#064d32;
+ --gold:#d4af37;
+ --black:#080b09;
+ --white:#fff;
+ --muted:#b9c2bc;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+ font-family:Arial,sans-serif;
+ background:#080b09;
+ color:white;
+ line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+
+header{
+ background:#080b09;
+ border-bottom:1px solid #b18b29;
+ position:sticky;
+ top:0;
+ z-index:1000;
+}
+.nav{
+ max-width:1250px;
+ margin:auto;
+ padding:14px 5%;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+.logo{
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+.logo-icon{
+ border:2px solid var(--gold);
+ color:var(--gold);
+ padding:7px;
+ font-size:22px;
+ font-weight:900;
+}
+.logo h2{
+ color:var(--gold);
+ font-size:22px;
+ letter-spacing:2px;
+}
+.logo small{
+ display:block;
+ color:white;
+ font-size:9px;
+ letter-spacing:3px;
+}
+nav{display:flex;gap:22px}
+nav a{font-size:14px}
+nav a:hover{color:var(--gold)}
+.menu{
+ display:none;
+ background:none;
+ color:white;
+ border:0;
+ font-size:27px;
+}
+
+.hero{
+ min-height:570px;
+ display:flex;
+ align-items:center;
+ background:
+ linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35)),
+ url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.hero-content{
+ max-width:1250px;
+ width:90%;
+ margin:auto;
+ padding:90px 0;
+}
+.tag{
+ color:var(--gold);
+ letter-spacing:4px;
+ font-size:12px;
+ font-weight:bold;
+}
+.hero h1{
+ font-size:clamp(42px,7vw,75px);
+ line-height:1.08;
+ margin:20px 0;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+ max-width:570px;
+ color:#eee;
+ margin-bottom:25px;
+}
+.btn{
+ display:inline-block;
+ padding:13px 23px;
+ margin:5px;
+ font-weight:bold;
+ border-radius:3px;
+}
+.gold-btn{background:var(--gold);color:#111}
+.outline-btn{border:1px solid white}
+.btn:hover{opacity:.85}
+
+.features{
+ background:#10452f;
+ padding:22px 5%;
+ display:flex;
+ justify-content:center;
+ gap:45px;
+ flex-wrap:wrap;
+ text-align:center;
+}
+.features strong{color:var(--gold)}
+
+section{padding:75px 5%}
+.container{max-width:1250px;margin:auto}
+.heading{text-align:center;margin-bottom:35px}
+.heading small{color:var(--gold);letter-spacing:3px}
+.heading h2{font-size:35px;margin:8px}
+.heading h2 span{color:var(--gold)}
+.heading p{color:var(--muted)}
+
+.about{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:40px;
+ align-items:center;
+}
+.about img{
+ height:380px;
+ object-fit:cover;
+ border-radius:6px;
+}
+.about h2{font-size:32px;margin:15px 0}
+.about h2 span{color:var(--gold)}
+.about p{color:#bbb;margin-bottom:15px}
+
+.catalogue{background:#101712}
+.search{
+ max-width:450px;
+ width:100%;
+ display:block;
+ margin:0 auto 22px;
+ padding:14px;
+ background:#080b09;
+ color:white;
+ border:1px solid #80651e;
+ border-radius:4px;
+ font-size:15px;
+}
+.filters{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ gap:9px;
+ margin-bottom:35px;
+}
+.filters button{
+ padding:10px 16px;
+ border:1px solid #655321;
+ border-radius:25px;
+ background:#171e19;
+ color:white;
+ cursor:pointer;
+}
+.filters button.active,
+.filters button:hover{
+ background:var(--gold);
+ color:black;
+}
+.product-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:19px;
+}
+.product-card{
+ background:#19221b;
+ border:1px solid #343d35;
+ border-radius:6px;
+ overflow:hidden;
+ transition:.3s;
+}
+.product-card:hover{
+ transform:translateY(-5px);
+ border-color:var(--gold);
+}
+.product-card img{
+ height:235px;
+ object-fit:cover;
+ background:#222;
+}
+.product-info{padding:15px}
+.product-info h3{font-size:16px}
+.product-info p{
+ color:#aeb8af;
+ font-size:12px;
+ margin:5px 0 12px;
+}
+.order{
+ display:block;
+ text-align:center;
+ background:var(--green);
+ color:white;
+ padding:10px;
+ border:1px solid var(--gold);
+ font-size:13px;
+ font-weight:bold;
+}
+.order:hover{background:var(--gold);color:black}
+.empty{text-align:center;color:var(--gold);display:none;padding:30px}
+
+.gallery{
+ background:#080b09;
+}
+.gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+.gallery-grid img{
+ height:230px;
+ object-fit:cover;
+ border-radius:5px;
+}
+
+.contact{background:#101712}
+.contact-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:35px;
+}
+.contact-box{
+ background:#19221b;
+ padding:25px;
+ border-left:3px solid var(--gold);
+ margin-bottom:15px;
+}
+.contact-box strong{color:var(--gold)}
+.contact-box p{color:#ddd}
+.contact-form{
+ background:#19221b;
+ padding:25px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+ width:100%;
+ padding:13px;
+ margin:8px 0;
+ background:#080b09;
+ border:1px solid #444;
+ color:white;
+}
+.contact-form textarea{height:120px}
+.contact-form button{
+ width:100%;
+ border:0;
+ cursor:pointer;
+ font-size:15px;
+}
+
+footer{
+ text-align:center;
+ padding:35px 15px;
+ background:#050705;
+ border-top:1px solid var(--gold);
+}
+footer h2{color:var(--gold)}
+footer p{color:#aaa;font-size:13px}
+
+.whatsapp{
+ position:fixed;
+ bottom:20px;
+ right:18px;
+ background:#25d366;
+ color:white;
+ padding:14px 19px;
+ border-radius:35px;
+ font-weight:bold;
+ z-index:999;
+}
+
+@media(max-width:900px){
+ .product-grid{grid-template-columns:repeat(3,1fr)}
+ nav{gap:12px}
+}
+@media(max-width:650px){
+ .menu{display:block}
+ nav{
+  display:none;
+  position:absolute;
+  top:65px;
+  left:0;
+  width:100%;
+  background:#080b09;
+  padding:20px;
+  flex-direction:column;
+ }
+ nav.open{display:flex}
+ .product-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+ .product-card img{height:170px}
+ .about,.contact-grid{grid-template-columns:1fr}
+ .gallery-grid{grid-template-columns:repeat(2,1fr)}
+ .gallery-grid img{height:155px}
+ section{padding:55px 5%}
+ .heading h2{font-size:27px}
+ .hero{min-height:490px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<a href="#home" class="logo">
+<div class="logo-icon">EF</div>
+<div>
+<h2>EURO FASHION</h2>
+<small>STYLE WITHOUT LIMITS</small>
+</div>
+</a>
+
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#catalogue">Collections</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="tag">WELCOME TO EURO FASHION</div>
+<h1>Discover Your<br><span>Perfect Style.</span></h1>
+<p>
+Explore a beautiful collection of modern fashion.
+From everyday casual outfits to elegant outfits,
+shoes, bags and accessories. Find your style with EURO FASHION.
+</p>
+<a href="#catalogue" class="btn gold-btn">EXPLORE COLLECTION</a>
+<a href="#contact" class="btn outline-btn">CONTACT US</a>
+</div>
+</section>
+
+<div class="features">
+<div><strong>✦</strong><br>Modern Fashion</div>
+<div><strong>✦</strong><br>Men & Women</div>
+<div><strong>✦</strong><br>Fashion Accessories</div>
+<div><strong>✦</strong><br>WhatsApp Ordering</div>
+</div>
+
+<section id="about">
+<div class="container about">
+<img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1000&q=85" alt="Fashion boutique">
+<div>
+<div class="tag">ABOUT OUR BRAND</div>
+<h2>Welcome to <span>EURO FASHION</span></h2>
+<p>
+EURO FASHION brings together modern clothing,
+beautiful fashion designs and stylish accessories.
+</p>
+<p>
+Our collections include men's and women's wear,
+casual outfits, elegant clothing, footwear,
+bags and accessories.
+</p>
+<p>
+Browse our collection and contact us directly
+on WhatsApp for product availability and prices.
+</p>
+<a href="#catalogue" class="btn gold-btn">VIEW COLLECTION</a>
+</div>
+</div>
+</section>
+
+<section class="catalogue" id="catalogue">
+<div class="container">
+
+<div class="heading">
+<small>OUR COLLECTIONS</small>
+<h2>Explore Our <span>Fashion</span></h2>
+<p>Discover different styles for every occasion.</p>
+</div>
+
+<input id="search" class="search" type="search" placeholder="Search clothes, shoes, bags...">
+
+<div class="filters">
+<button class="active" data-filter="all">All Items</button>
+<button data-filter="men">Men</button>
+<button data-filter="women">Women</button>
+<button data-filter="tops">Tops</button>
+<button data-filter="bottoms">Trousers & Bottoms</button>
+<button data-filter="outerwear">Jackets & Jumpers</button>
+<button data-filter="shoes">Shoes</button>
+<button data-filter="bags">Bags</button>
+<button data-filter="accessories">Accessories</button>
+</div>
+
+<div class="product-grid" id="products"></div>
+<div class="empty" id="empty">No matching products found.</div>
+
+</div>
+</section>
+
+<section class="gallery" id="gallery">
+<div class="container">
+<div class="heading">
+<small>STYLE INSPIRATION</small>
+<h2>Fashion <span>Gallery</span></h2>
+<p>Explore modern fashion inspiration.</p>
+</div>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=85" alt="Fashion outfits">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Women's fashion">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=85" alt="Fashion model">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85" alt="Modern clothing">
+<img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=800&q=85" alt="Men's fashion">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85" alt="Sneakers">
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="heading">
+<small>GET IN TOUCH</small>
+<h2>Contact <span>EURO FASHION</span></h2>
+<p>Choose an item and enquire directly through WhatsApp.</p>
+</div>
+
+<div class="contact-grid">
+<div>
+<div class="contact-box">
+<strong>WHATSAPP CONTACT 1</strong>
+<p>+256 700 787 697</p>
+<a class="btn gold-btn" href="https://wa.me/256700787697">CHAT NOW</a>
+</div>
+<div class="contact-box">
+<strong>WHATSAPP CONTACT 2</strong>
+<p>+257 655 496 08</p>
+<a class="btn gold-btn" href="https://wa.me/25765549608">CHAT NOW</a>
+</div>
+<div class="contact-box">
+<strong>EURO FASHION</strong>
+<p>Fashion • Clothing • Shoes • Bags • Accessories</p>
+</div>
+</div>
+
+<form class="contact-form" id="contactForm">
+<h3>Make an Enquiry</h3>
+<input id="customer" placeholder="Your name" required>
+<input id="customerPhone" placeholder="Your phone number" required>
+<select id="item">
+<option value="">Select an item</option>
+</select>
+<textarea id="message" placeholder="Tell us what you are looking for..." required></textarea>
+<button class="btn gold-btn" type="submit">SEND WHATSAPP ENQUIRY</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>EURO FASHION</h2>
+<p>STYLE WITHOUT LIMITS</p>
+<p>Clothing • Shoes • Bags • Accessories</p>
+<p>WhatsApp: +256 700 787 697</p>
+<p>© <span id="year"></span> EURO FASHION. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/256700787697">WhatsApp Us</a>
+
+<script>
+const products = [
+
+["men","Men's Polo Shirts","photo-1625910513413-5fc45c8d1e7b"],
+["men","Men's Casual T-Shirts","photo-1521572163474-6864f9cf17ab"],
+["men","Men's Graphic T-Shirts","photo-1503341504253-dff4815485f1"],
+["men","Men's Formal Shirts","photo-1598033129183-c4f50c736f10"],
+["men","Men's Denim Shirts","photo-1603252109303-2751441dd157"],
+["men","Men's Casual Shirts","photo-1602810318383-e386cc2a3ccf"],
+["men","Men's Chinos","photo-1473966968600-fa801b869a1a"],
+["men","Men's Jeans","photo-1542272604-787c3835535d"],
+["men","Men's Cargo Trousers","photo-1515886657613-9f3515b0c78f"],
+["men","Men's Joggers","photo-1552902865-b72c031ac5ea"],
+
+["women","Women's Blouses","photo-1566206091558-7f218b696731"],
+["women","Women's Dresses","photo-1496747611176-843222e1e57c"],
+["women","Elegant Dresses","photo-1539008835657-9e8e9680c956"],
+["women","Casual Dresses","photo-1515372039744-b8f02a3ae446"],
+["women","Women's Tops","photo-1503342217505-b0a15ec3261c"],
+["women","Crop Tops","photo-1551488831-00ddcb6c6bd3"],
+["women","Women's Skirts","photo-1583496661160-fb5886a0aaaa"],
+["women","Women's Jeans","photo-1541099649105-f69ad21f3246"],
+["women","Women's Leggings","photo-1506629905607-d9b1e2a5e6e8"],
+["women","Women's Jumpsuits","photo-1524504388940-b1c1722653e1"],
+
+["tops","Long Sleeve Shirts","photo-1598554747436-c9293d6a588f"],
+["tops","Short Sleeve Shirts","photo-1523381210434-271e8be1f52b"],
+["tops","Tank Tops","photo-1551488831-00ddcb6c6bd3"],
+["tops","Cardigans","photo-1434389677669-e08b4cac3105"],
+["tops","Knit Sweaters","photo-1576566588028-4147f3842f27"],
+["tops","Formal Blouses","photo-1566206091558-7f218b696731"],
+
+["bottoms","Skinny Jeans","photo-1541099649105-f69ad21f3246"],
+["bottoms","Baggy Jeans","photo-1542272604-787c3835535d"],
+["bottoms","Cargo Pants","photo-1515886657613-9f3515b0c78f"],
+["bottoms","Track Pants","photo-1552902865-b72c031ac5ea"],
+["bottoms","Formal Trousers","photo-1473966968600-fa801b869a1a"],
+["bottoms","Shorts","photo-1591195853828-11db59a44f6b"],
+["bottoms","Denim Shorts","photo-1511196044526-5cb3bcb7071b"],
+
+["outerwear","Hoodies","photo-1556821840-3a63f95609a7"],
+["outerwear","Men's Jumpers","photo-1578681994506-b8f463449011"],
+["outerwear","Women's Jumpers","photo-1576566588028-4147f3842f27"],
+["outerwear","Denim Jackets","photo-1516826957135-700dedea698c"],
+["outerwear","Leather Jackets","photo-1520975958225-35b6f3d2b7f2"],
+["outerwear","Winter Jackets","photo-1544923246-77307dd654cb"],
+["outerwear","Blazers","photo-1591047139829-d91aecb6caea"],
+["outerwear","Tracksuits","photo-1551488831-00ddcb6c6bd3"],
+
+["shoes","Classic Sneakers","photo-1542291026-7eec264c27ff"],
+["shoes","White Sneakers","photo-1525966222134-fcfa99b8ae77"],
+["shoes","Running Shoes","photo-1460353581641-37baddab0fa2"],
+["shoes","High Top Sneakers","photo-1495555961986-6d4c1ecb7be3"],
+["shoes","Men's Formal Shoes","photo-1614252369475-531eba835eb1"],
+["shoes","Women's Heels","photo-1543163521-1bf539c55dd2"],
+["shoes","Women's Sandals","photo-1603487742131-4160ec999306"],
+["shoes","Boots","photo-1543163521-1bf539c55dd2"],
+["shoes","Casual Loafers","photo-1531310197839-ccf54634509e"],
+
+["bags","Handbags","photo-1584917865442-de89df76afd3"],
+["bags","Shoulder Bags","photo-1590874103328-eac38a683ce7"],
+["bags","Crossbody Bags","photo-1548036328-c9fa89d128fa"],
+["bags","Backpacks","photo-1553062407-98eeb64c6a62"],
+["bags","Travel Bags","photo-1565026057447-bc90a3dceb87"],
+["bags","Mini Bags","photo-1584917865442-de89df76afd3"],
+["bags","Laptop Bags","photo-1496181133206-80ce9b88a853"],
+["bags","Wallets","photo-1627123424574-724758594e93"],
+
+["accessories","Wrist Watches","photo-1523275335684-37898b6baf30"],
+["accessories","Sunglasses","photo-1511499767150-a48a237f0083"],
+["accessories","Necklaces","photo-1599643478518-a784e5dc4c8f"],
+["accessories","Fashion Earrings","photo-1535632066927-ab7c9ab60908"],
+["accessories","Bracelets","photo-1611652022419-a9419f74343d"],
+["accessories","Caps","photo-1588850561407-ed78c282e89b"],
+["accessories","Fashion Scarves","photo-1601924994987-69e26d50dc26"],
+["accessories","Belts","photo-1624222247344-550fb8b3f4a3"],
+["accessories","Fashion Socks","photo-1586350977771-b3b0aaa9c5a2"]
+
+];
+
+const grid = document.getElementById("products");
+const select = document.getElementById("item");
+const search = document.getElementById("search");
+let category = "all";
+
+function showProducts(){
+ const term = search.value.toLowerCase();
+ grid.innerHTML = "";
+
+ let count = 0;
+
+ products.forEach((p,index)=>{
+  const [cat,name,image] = p;
+
+  const matchesCategory =
+   category === "all" ||
+   category === cat ||
+   (category === "men" && cat === "men") ||
+   (category === "women" && cat === "women");
+
+  const matchesSearch = name.toLowerCase().includes(term);
+
+  if(matchesCategory && matchesSearch){
+   count++;
+
+   const card = document.createElement("article");
+   card.className = "product-card";
+
+   const img = document.createElement("img");
+   img.src = "https://images.unsplash.com/" + image +
+    "?auto=format&fit=crop&w=700&q=80";
+   img.alt = name;
+   img.loading = "lazy";
+
+   img.onerror = function(){
+    this.src = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80";
+   };
+
+   const info = document.createElement("div");
+   info.className = "product-info";
+
+   const title = document.createElement("h3");
+   title.textContent = name;
+
+   const description = document.createElement("p");
+   description.textContent = "Discover this style at EURO FASHION. Contact us for availability and price.";
+
+   const button = document.createElement("a");
+   button.className = "order";
+   button.href = "https://wa.me/256700787697?text=" +
+    encodeURIComponent("Hello EURO FASHION, I am interested in " + name + ". Please share the price and availability.");
+
+   button.target = "_blank";
+   button.textContent = "ENQUIRE ON WHATSAPP →";
+
+   info.append(title,description,button);
+   card.append(img,info);
+   grid.appendChild(card);
+  }
+ });
+
+ document.getElementById("empty").style.display =
+  count ? "none" : "block";
+}
+
+products.forEach(p=>{
+ const option = document.createElement("option");
+ option.value = p[1];
+ option.textContent = p[1];
+ select.appendChild(option);
+});
+
+document.querySelectorAll(".filters button").forEach(button=>{
+ button.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  category = button.dataset.filter;
+  showProducts();
+ });
+});
+
+search.addEventListener("input",showProducts);
+
+document.getElementById("contactForm").addEventListener("submit",e=>{
+ e.preventDefault();
+
+ const name = document.getElementById("customer").value;
+ const phone = document.getElementById("customerPhone").value;
+ const item = select.value;
+ const message = document.getElementById("message").value;
+
+ const text =
+  "Hello EURO FASHION!\n\n" +
+  "Name: " + name + "\n" +
+  "Phone: " + phone + "\n" +
+  "Item: " + item + "\n" +
+  "Enquiry: " + message + "\n\n" +
+  "Please share the price and availability.";
+
+ window.open(
+  "https://wa.me/256700787697?text=" + encodeURIComponent(text),
+  "_blank"
+ );
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+showProducts();
+</script>
+
+</body>
+  </html>
